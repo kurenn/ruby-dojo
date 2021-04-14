@@ -1,24 +1,177 @@
 {
   "sidebar": [
     {
-      "section": "Introduction",
+      "section": "Módulo 1",
       "topics": [
         {
-          "title": "Getting started",
-          "slug": "getting-started"
+          "title": "Tipos de Datos",
+          "slug": "tipos-de-datos"
+        },
+        {
+          "title": "Arreglos",
+          "slug": "arreglos"
+        },
+        {
+          "title": "Hashes",
+          "slug": "hashes"
+        },
+        {
+          "title": "Colecciones anidadas",
+          "slug": "colecciones-anidadas"
+        },
+        {
+          "title": "Control de flujos",
+          "slug": "control-de-flujos"
+        },
+        {
+          "title": "Introducción a #each",
+          "slug": "introduccion-a-each"
+        },
+        {
+          "title": "Métodos",
+          "slug": "metodos"
+        },
+        {
+          "title": "Clases y Objetos",
+          "slug": "clases-y-objetos"
+        },
+        {
+          "title": "Variables y su alcance",
+          "slug": "variables-y-su-alcance"
+        },
+        {
+          "title": "Introducción a Enumerable",
+          "slug": "introduccion-a-enumerable"
+        },
+        {
+          "title": "Manejo de archivos",
+          "slug": "manejo-de-archivos"
+        },
+        {
+          "title": "Modulos",
+          "slug": "modulos"
+        },
+        {
+          "title": "Herencia",
+          "slug": "herencia"
+        },
+        {
+          "title": "Principios de diseño",
+          "slug": "principios-de-diseno"
+        },
+        {
+          "title": "Solución de problemas",
+          "slug": "solucion-de-problemas"
+        },
+        {
+          "title": "Introducción a pruebas con RSpec",
+          "slug": "introduccion-a-pruebas-con-rspec"
+        },
+        {
+          "title": "Mocks y Stubs",
+          "slug": "mocks-y-stubs"
+        },
+        {
+          "title": "Debugging",
+          "slug": "debugging"
         }
       ]
     },
     {
-      "section": "Setup",
+      "section": "Módulo 2",
       "topics": [
         {
-          "title": "Theme configuration",
-          "slug": "theme-configuration"
+          "title": "Web y HTTP I",
+          "slug": "web-y-http-i"
         },
         {
-          "title": "Forestry CMS",
-          "slug": "forestry-cms"
+          "title": "Web y HTTP II",
+          "slug": "web-y-http-ii"
+        },
+        {
+          "title": "Web y HTTP III",
+          "slug": "web-y-http-iii"
+        },
+        {
+          "title": "Ecosistema de Rails",
+          "slug": "ecosistema-de-rails"
+        },
+        {
+          "title": "Introducción a MVC",
+          "slug": "introduccion-a-mvc"
+        },
+        {
+          "title": "Páginas estáticas",
+          "slug": "paginas-estaticas"
+        },
+        {
+          "title": "Introducción a Helpers",
+          "slug": "introduccion-a-helpers"
+        },
+        {
+          "title": "Modelando usuarios",
+          "slug": "modelando-usuarios"
+        },
+        {
+          "title": "Asociaciones con ActiveRecord",
+          "slug": "asociaciones-con-activerecord"
+        },
+        {
+          "title": "Del Controlador a la Vista",
+          "slug": "del-controlador-a-la-vista"
+        },
+        {
+          "title": "Formas y Parámetros",
+          "slug": "formas-y-parametros"
+        },
+        {
+          "title": "Manejo de sesión",
+          "slug": "manejo-de-sesión"
+        },
+        {
+          "title": "REST & CRUD",
+          "slug": "rest-&-crud"
+        },
+        {
+          "title": "Tuits de usuarios",
+          "slug": "tuits-de-usuarios"
+        },
+        {
+          "title": "Autorización básica",
+          "slug": "autorizacion-basica"
+        },
+        {
+          "title": "Asociaciones recursivas",
+          "slug": "asociaciones-recursivas"
+        },
+        {
+          "title": "Envio de correos",
+          "slug": "envio-de-correos"
+        }
+      ]
+    },
+    {
+      "section": "Módulo 3",
+      "topics": [
+        {
+          "title": "Autenticación con Devise",
+          "slug": "autenticacion-con-devise"
+        },
+        {
+          "title": "Introducción a OAuth",
+          "slug": "introducción-a-oauth"
+        },
+        {
+          "title": "ActiveRecord Avanzado",
+          "slug": "activerecord-avanzado"
+        },
+        {
+          "title": "Rails y StimulusJS",
+          "slug": "rails-y-stimulusjs"
+        },
+        {
+          "title": "Hotwire",
+          "slug": "hotwire"
         }
       ]
     }
