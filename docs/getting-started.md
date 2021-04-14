@@ -1,7 +1,7 @@
 ---
-title: Getting started
+title: Tipos de Datos
 date: 2018-09-15 07:42:34
-slug: getting-started
+slug: tipos-de-datos
 ---
 
 ## What is Jamdocs
