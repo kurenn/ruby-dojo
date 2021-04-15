@@ -1,0 +1,5 @@
+---
+title: Data Types
+date: 2021-04-15
+slug: data-types
+---

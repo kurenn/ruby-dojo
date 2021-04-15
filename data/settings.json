@@ -33,10 +33,10 @@
         },
         {
           "title": "Classes & Instances",
-          "slug": "classes-&-instances"
+          "slug": "classes-and-instances"
         },
         {
-          "title": "Variables scope",
+          "title": "Variables Scope",
           "slug": "variables-scope"
         },
         {
@@ -69,7 +69,7 @@
         },
         {
           "title": "Mocks & Stubs",
-          "slug": "mocks-&-stubs"
+          "slug": "mocks-and-stubs"
         },
         {
           "title": "Debugging",
@@ -82,15 +82,15 @@
       "topics": [
         {
           "title": "Web & HTTP I",
-          "slug": "web-&-http-i"
+          "slug": "web-and-http-i"
         },
         {
           "title": "Web & HTTP II",
-          "slug": "web-&-http-ii"
+          "slug": "web-and-http-ii"
         },
         {
           "title": "Web & HTTP III",
-          "slug": "web-&-http-iii"
+          "slug": "web-and-http-iii"
         },
         {
           "title": "Rails Ecosystem",
@@ -122,7 +122,7 @@
         },
         {
           "title": "Forms & Parameters",
-          "slug": "forms-&-parameters"
+          "slug": "forms-and-parameters"
         },
         {
           "title": "Sessions",
@@ -130,11 +130,11 @@
         },
         {
           "title": "REST & CRUD",
-          "slug": "rest-&-crud"
+          "slug": "rest-and-crud"
         },
         {
-          "title": "User's Micropost",
-          "slug": "user-micropost"
+          "title": "Users Micropost",
+          "slug": "users-microposts"
         },
         {
           "title": "Basic Authorization",
@@ -167,7 +167,7 @@
         },
         {
           "title": "Rails & StimulusJS",
-          "slug": "rails-&-stimulusjs"
+          "slug": "rails-and-stimulusjs"
         },
         {
           "title": "Hotwire",
