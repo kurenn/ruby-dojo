@@ -13,15 +13,15 @@ slug: arrays
 
 ## What are Arrays?
 
-In simple words, and array is a collection of data:
+In simple words, an array is a collection of data:
 
 * Separated by commas and enclosed by square brackets 
 * Can store big amounts of data or `elements`, or can be empty 
-* Can contain any type of data type(strings, integers, floats), even other arrays.
+* Can contain any type of data type (strings, integers, floats), even other arrays.
 * Has no particular order
 
 This is another data type in Ruby, and as mentioned in the last lesson, it is also an `instance` of the class 
-[Array](https://ruby-doc.org/core-3.0.1/Array.html). We will keep reviewing these concepts as we move forward, just remember that everything in ruby is an `instance` or `object` of a particular class.
+[Array](https://ruby-doc.org/core-3.0.1/Array.html). We will keep reviewing these concepts as we move forward, just remember that everything in Ruby is an `instance` or `object` of a particular class.
 
 Here is how arrays look in Ruby:
 
