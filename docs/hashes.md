@@ -15,6 +15,7 @@ slug: hashes
 
 In simple words, a hash is a collection of key-value pairs:
 
+* Represents a collection of named values
 * Separated by commas and enclosed by curly braces
 * Can store big amounts of data or `elements`, or can be empty 
 * Can contain any type of data type (strings, integers, floats), even other hashes.
@@ -63,6 +64,19 @@ Remember that you can test the examples above with the interpreter, just open a 
 irb(main):003:0> { name: "Alice" }
 => {:name=>"Alice"}
 ```
+
+Another way to create a Hash, is by simply using the Class itself:
+
+```ruby
+Hash.new
+```
+
+And when using this syntax, you are able pass a value, for the value of any key is that:
+
+```ruby
+Hash.new(0)
+```
+
 
 ## Reading a Hash
 

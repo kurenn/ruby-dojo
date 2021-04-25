@@ -16,16 +16,16 @@
           "slug": "hashes"
         },
         {
-          "title": "Nested collections",
-          "slug": "nested-collections"
-        },
-        {
           "title": "Flow Control",
           "slug": "flow-control"
         },
         {
           "title": "Introduction to #each",
           "slug": "introduction-to-each"
+        },
+        {
+          "title": "Nested collections",
+          "slug": "nested-collections"
         },
         {
           "title": "Methods",
