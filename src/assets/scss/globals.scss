@@ -55,3 +55,13 @@ h1 {
 a {
   color: $brandPrimary;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #999;
+  padding: 5px;
+}
