@@ -306,6 +306,12 @@ end
 As you can see we are not reducing the `number_of_persons` variable, therefore the `while` loop will never be able to finish. This is what is called an
 infinite loop, and it commonly ends up consuming all the memory assigned.
 
+## Exercises
+
+Remember we have provided a repository with a bunch of exercises for you to complete. You can find it [here](https://github.com/kurenn/ruby-exercises)
+
+You can finde them under `/ruby-exercises/Module1/flow-control`.
+
 ## Additional Resources
 
 + [Understanding Ruby Blocks](https://www.rubyguides.com/2016/02/ruby-procs-and-lambdas/#Understanding_Ruby_Blocks)
