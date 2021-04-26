@@ -216,3 +216,100 @@ heroe = "Hulk"
 heroe == "Hulk" || "Black Widow"
 ```
 
+## Looping in Ruby
+
+Loops are a very powerful tool we as developers have to our disposal, in order:
+
+* to repeat a task as many times as we want
+* or as long a as condition is met.
+
+In this part of the lesson, we will learn to use `times`, `while`, `until`.
+
+#### times
+
+This type of loop executes the exact number of times:
+
+```ruby
+3.times do 
+  # Include here the code to execute 3 times
+end
+```
+
+You can also add what is called **block variable** to access the current iteration:
+
+```ruby
+3.times do |number|
+  puts number
+end
+```
+
+This will output:
+
+```ruby
+0
+1
+2
+```
+
+#### while
+
+The `while` loop will execute code as long as the condition is met:
+
+```ruby
+while hungry?
+  eat
+end
+```
+
+Another use for this, is having an actual counter and reduce it with each iteration:
+
+```ruby
+number_of_persons = 4
+while number_of_persons > 0
+  feed_person
+  number_of_persons = number_of_persons - 1
+end
+```
+
+#### until
+
+The `until` loop will execute code as long as the condition is met:
+
+```ruby
+until full?
+  eat
+end
+```
+
+Another use for this, is having an actual counter and reduce it with each iteration:
+
+```ruby
+number_of_persons = 0
+until number_of_persons > 4
+  feed_person
+  number_of_persons = number_of_persons + 1
+end
+```
+
+### Infinite loop
+
+When working with `loops` you may encounter that sometimes the iterations would never stop, because of the
+condition will always meet. For example:
+
+```ruby
+number_of_persons = 4
+while number_of_persons > 0
+  feed_person
+end
+```
+
+As you can see we are not reducing the `number_of_persons` variable, therefore the `while` loop will never be able to finish. This is what is called an
+infinite loop, and it commonly ends up consuming all the memory assigned.
+
+## Additional Resources
+
++ [Understanding Ruby Blocks](https://www.rubyguides.com/2016/02/ruby-procs-and-lambdas/#Understanding_Ruby_Blocks)
++ [Ruby Docs](https://www.ruby-doc.org/)
++ [Official Ruby Language Doumentation](https://ruby-doc.org/core-2.6/)
++ [TryRuby: Learn programming with Ruby](https://ruby.github.io/TryRuby/)
++ [Icalia Labs Internal Ruby Guides](https://github.com/IcaliaLabs/guides/tree/master/stack/ruby)
