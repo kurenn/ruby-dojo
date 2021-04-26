@@ -128,6 +128,7 @@ export default {
   .dark & {
     background: $sidebarDark;
     border-color: shade($sidebarDark, 40%);
+    color: #B5BAD4;
   }
 }
 
@@ -163,9 +164,9 @@ ul {
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 20px;
-  opacity: .3;
   letter-spacing: .15em;
   font-weight: 700;
+  color: #FD6D71;
 }
 
 .topic {
