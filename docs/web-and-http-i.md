@@ -6,6 +6,8 @@ slug: web-and-http-i
 
 ## What are you going to learn ?
 * Make a simple HTTP server
+* How HTTP and TCP work together
+* Using Rack
 
 ## What is a Web server
 It accepts requests from clients(users), then it returns a response. Web server I'm creating now is very simple, it handles the HTTP GET requests correctly.
