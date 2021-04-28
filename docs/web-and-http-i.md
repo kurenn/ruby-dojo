@@ -94,56 +94,54 @@ If you start the server and open http://localhost:5678 in your browser, you shou
 
 ## Serving a Rack app
 
-Until now, our server has been returning a single response for each request. To make it a little more useful, we could add more responses to our server. Instead of adding these to the server directly, we'll use a `Rack` app. Our server will parse HTTP requests and pass them to the Rack app, which will then return a response for the server and send back to the client.
+Rack is the underlying technology behind nearly all of the web frameworks in the Ruby world. "Rack" is actually a few different things:
 
-`Rack` is an interface between web servers that supports Ruby and most Ruby web frameworks like Rails and Sinatra. In its simplest form, a Rack app is an object that responds to call and returns a "tiplet", an array with three items: an HTTP response code, a hash of HTTP headers and a body.
+* An architecture - Rack defines a very simple interface, and any code that conforms to this interface can be used in a Rack application. This makes it very easy to build small, focused, and reusable bits of code and then use Rack to compose these bits into a larger application.
 
-This is how a basic `Rack` application looks like:
+* A Ruby gem - Rack is is distributed as a Ruby gem that provides the glue code needed to compose our code.
+
+Rack defines a very simple interface. Rack compliant code must have the following three characteristics:
+
+* **It must respond to** `call`.
+
+* **The** `call` **method must accept a single argument** - This argument is typically called `env` or environment, and it bundles all of the data about the request.
+
+* The `call` **method must return an array of three elements** These elements are, in order, status for the HTTP status code, headers, and body for the actual content of the response.
+
+A nice side effect of the `call` interface is that **procs** and **lambdas** can be used as Rack objects.
+
+The following code sample shows a bare-bones Rack-compliant application that simply returns the text *"Hello World"*.
 
 ```ruby
-  app = Proc.new do |env|
-    ['200', {'Content-Type' => 'text/html'}, ["Hello world! The time is #{Time.now}"]]
+require "rack"
+require "thin"
+
+class HelloWorld
+  def call(env)
+    [ 200, { "Content-Type" => "text/plain" }, ["Hello World"] ]
   end
+end
+
+Rack::Handler::Thin.run HelloWorld.new
 ```
+In the sample we implement a class with a single instance method, call, that takes in the env and always returns a 200 (HTTP "OK" status), a "Content-Type" header, and the body of "Hello World".
 
-In this example, the response code is `200`, we're passing `text/html` as the content type through the headers, and the body is an array with a string.
+Note that**Rack expects the body portion of the response array** to respond to each, so bare strings need to be wrapped in an array. More commonly, the body object will be some other type of IO object, rather than a bare string, so this wrapping is not needed in those cases.
 
-To allow our server to serve responses from this app, we'll need to turn the returned triplet into a HTTP response string. Instead of always returning a static response, like we did before, we'll now have to build the response from the triplet returned by the Rack app.
+Lastly, we can see that we've required thin, a Ruby web server, and by doing so we can use the Rack compliant handler provided by **Thin**. Thanks to the simple nature of the Rack interface, nearly all Ruby web servers have implemented a Rack handler and we can largely swap them out, without needing to change our application code. Hooray for useful abstractions!
+
+## Using a lambda
+Just for fun, and because we can, let's update the hello world sample to use a lambda, rather than a class:
 
 ```ruby
-  # http_server.rb
-  require 'socket'
+require "rack"
+require "thin"
 
-  app = Proc.new do
-    ['200', {'Content-Type' => 'text/html'}, ["Hello world! The time is #{Time.now}"]]
-  end
+app = -> (env) do
+  [ 200, { "Content-Type" => "text/html" }, ["<h2>Hello world! The time is #{Time.now}</h2>"] ]
+end
 
-  server = TCPServer.new 5678
-
-  while session = server.accept
-    request = session.gets
-    puts request
-
-    # 1
-    status, headers, body = app.call({})
-
-    # 2
-    session.print "HTTP/1.1 #{status}\r\n"
-
-    # 3
-    headers.each do |key, value|
-      session.print "#{key}: #{value}\r\n"
-    end
-
-    # 4
-    session.print "\r\n"
-
-    # 5
-    body.each do |part|
-      session.print part
-    end
-    session.close
-  end
+Rack::Handler::Thin.run app
 ```
 
 ## Exercises
