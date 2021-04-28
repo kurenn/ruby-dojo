@@ -126,7 +126,7 @@ Rack::Handler::Thin.run HelloWorld.new
 ```
 In the sample we implement a class with a single instance method, call, that takes in the env and always returns a 200 (HTTP "OK" status), a "Content-Type" header, and the body of "Hello World".
 
-Note that**Rack expects the body portion of the response array** to respond to each, so bare strings need to be wrapped in an array. More commonly, the body object will be some other type of IO object, rather than a bare string, so this wrapping is not needed in those cases.
+Note that **Rack expects the body portion of the response array** to respond to each, so bare strings need to be wrapped in an array. More commonly, the body object will be some other type of IO object, rather than a bare string, so this wrapping is not needed in those cases.
 
 Lastly, we can see that we've required thin, a Ruby web server, and by doing so we can use the Rack compliant handler provided by **Thin**. Thanks to the simple nature of the Rack interface, nearly all Ruby web servers have implemented a Rack handler and we can largely swap them out, without needing to change our application code. Hooray for useful abstractions!
 
