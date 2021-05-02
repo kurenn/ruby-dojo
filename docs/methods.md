@@ -41,7 +41,7 @@ greetings("Alice")
 
 We will decompuse the code above, just to clarify what is happening:
 
-![alt text](method_description.png)
+![Method Description](/method_description.png)
 
 As you can see above, there a lot of things happening here on which we'll spend some time explaining it.
 
