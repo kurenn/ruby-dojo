@@ -24,12 +24,12 @@
           "slug": "introduction-to-each"
         },
         {
-          "title": "Nested collections",
-          "slug": "nested-collections"
-        },
-        {
           "title": "Methods",
           "slug": "methods"
+        },
+        {
+          "title": "Nested collections",
+          "slug": "nested-collections"
         },
         {
           "title": "Classes & Instances",
