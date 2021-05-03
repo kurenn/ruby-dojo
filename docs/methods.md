@@ -77,6 +77,91 @@ Here is a method invokation with two parameters:
 "And I am Alice".gsub "Alice", "Iron Man"
 ```
 
+#### Default Argument Values
+
+Unlike other programming languages, Ruby allows you to set default values for arguments:
+
+```ruby
+def greetings(name = "Human")
+  puts "Hi, #{name}"
+end
+
+greetings
+#=> Hi, Human
+greetings("Alice")
+#=> Hi, Alice
+```
+
+By having a default value on a parameter, you will be able to invoke the method without parameters, which may prevent the application from crashing. 
+When using this, just be aware, that only the last arguments can have default values, or in other words, you can't have arguments with default values between
+one that doesn't:
+
+```ruby
+# This won't even "compile"
+def process_payment(currency = "MXN", amount, gateway = :paypal)
+end
+```
+
+To make the code above work, while keeping the default values, you can do the following:
+
+```ruby
+def process_payment(currency = "MXN", amount = 0.0, gateway = :paypal)
+end
+```
+
+#### Blocks
+
+A cool feature of Ruby, is that it lets you send a block of code as an argument of a method, yes, several lines of code as a singular argument. This is possible through a mechanism
+called blocks, which allow you to group any number of lines of code into a standalone unit. They are highly use to create [DSL](https://en.wikipedia.org/wiki/Domain-specific_language).
+
+Let's say you want to send an email, with a base structure, while keeping it flexible to write anything you want on the body:
+
+```ruby
+def email_to(email, &block)
+  puts "Hi #{email}"
+  yield if block_given?
+  puts "It was nice talking to you, see you!"
+  puts "darth@vader.com"
+end
+
+email_to "luke@skywalker.com" do
+  puts "Luke, I am your father!"
+end
+
+# Hi luke@skywalker.com
+# Luke, I am your father
+# It was nice talking to you, see you!
+# darth@vader.com
+```
+
+So, as you can imagine, all the code between the `do` and `end` keywords is evaluated inside the method with the `yield` method. This gives you the power to add any ruby code
+you like, and `yield` will take care of the rest. Notice the `&block` keyword is reserved and needs to have the `&` which is a [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) in memory. We won't go into much detail, just be aware this is a reference concern.
+
+> **What would happend if you call the method without a block?**
+
+It is possible to have parameters with `yield`. You can pass any parameter to yield, so when it runs it can use the accordingly. Those parameters could be local variables to the method
+in which `yield` lives in.
+
+```ruby
+# This method will provide an interface for the developers
+# that will close the stream automatically for them
+def write_to(filename="tmp.txt", &block)
+  file = File.new(filename, "w")
+  file.write "---\n"
+  yield(file) if block_given?
+  file.write "---"
+  file.close
+end
+
+write_to "sample.txt" do |file|
+  file.write "Hi, my name is Abraham\n"
+  file.write "I'm 32 years old\n"
+  file.write "And loves to do magic\n"
+end
+```
+
+As you can see, the `file` variable which is local to the `write_to` method is passed as an argument, which in the invokation can be used to access the file object. 
+
 #### Return values
 
 In programming a **Return value** is the output or result of a method. 
@@ -165,5 +250,6 @@ You can finde them under `/ruby-exercises/Module1/methods`.
 ## Additional Resources
 
 + [Ruby Docs](https://www.ruby-doc.org/)
++ [Mastering Ruby Blocks in Less Than 5 Minutes](https://mixandgo.com/learn/ruby-blocks)
 + [TryRuby: Learn programming with Ruby](https://ruby.github.io/TryRuby/)
 + [Icalia Labs Internal Ruby Guides](https://github.com/IcaliaLabs/guides/tree/master/stack/ruby)
