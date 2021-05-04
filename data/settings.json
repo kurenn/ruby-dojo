@@ -1,6 +1,19 @@
 {
   "sidebar": [
     {
+      "section": "Module 0",
+      "topics": [
+        {
+          "title": "Install Ruby",
+          "slug": "install-ruby"
+        },
+        {
+          "title": "Setup Vscode",
+          "slug": "setup-vscode"
+        }
+      ]
+    },
+    {
       "section": "Module 1",
       "topics": [
         {
