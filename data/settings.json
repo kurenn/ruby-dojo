@@ -28,6 +28,10 @@
           "slug": "methods"
         },
         {
+          "title": "Introduction to Enumerable",
+          "slug": "introduction-to-enumerable"
+        },
+        {
           "title": "Nested collections",
           "slug": "nested-collections"
         },
@@ -38,10 +42,6 @@
         {
           "title": "Variables Scope",
           "slug": "variables-scope"
-        },
-        {
-          "title": "Introduction to Enumerable",
-          "slug": "introduction-to-enumerable"
         },
         {
           "title": "File handling",
