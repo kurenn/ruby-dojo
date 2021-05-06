@@ -11,22 +11,17 @@ If you don't yet have VS Code installed on your computer, head to [code.visualst
 ## Extensions and settings Ruby on Rails Developers
 
 Ruby is built with developer happiness in mind. However, if your editor is not correctly set up, you’re in for a painful ride. Finding the right extensions on VS Code can take you down a long trial-and-error path.
-Here’s a list of powerful extensions for Ruby on Rails developers.
+
+Here's a list of powerful extensions for Ruby on Rails developers.
 
 Extensions: 
 
 * [Ruby (basic ruby support)](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) 
-  
-* [Solargraph (linter, autocomplete)](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph) (You need to install the Ruby gem: ``gem install solargraph``)
-  
-* [Rubocop (linter)](https://marketplace.visualstudio.com/items?itemName=misogi.ruby-rubocop) (You need to install the Ruby gem: ``gem install rubocop``)
-  
+* [Solargraph (linter, autocomplete)](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph) (You need to install the Ruby gem: `gem install solargraph`)
+* [Rubocop (linter)](https://marketplace.visualstudio.com/items?itemName=misogi.ruby-rubocop) (You need to install the Ruby gem: `gem install rubocop`)
 * [GitLens (git visibility)](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) 
- 
 * [Live Share (pair programming )](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) 
-
 * [RSpec Snippets (test snippets)](https://marketplace.visualstudio.com/items?itemName=ldrner.rspec-snippets-vscode) 
-
 * [Erb (html.erb support)](https://marketplace.visualstudio.com/items?itemName=Riey.erb&ssr=false#overview) 
 
 ```Bash
@@ -37,9 +32,9 @@ code --install-extension eamodio.gitlens
 code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension ldrner.rspec-snippets-vscode
 code --install-extension riey.erb
-
 ```
-You can install these through command line, one by one using the command: ``code --install-extension $EXT_NAME``.
+
+You can install these through command line, one by one using the command: `code --install-extension $EXT_NAME`.
 
 ### Recommended settings for VSCode:
 
@@ -58,4 +53,5 @@ You can install these through command line, one by one using the command: ``code
   "window.titleBarStyle": "custom",
   "files.trimTrailingWhitespace": true,
 ```
-Add these settings in ``File > Preferences > Settings`` (open the settings in json)
+
+Add these settings in `File > Preferences > Settings` (open the settings in json)
