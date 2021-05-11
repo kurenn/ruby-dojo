@@ -57,12 +57,12 @@
           "slug": "variables-scope"
         },
         {
-          "title": "File handling",
-          "slug": "file-handling"
-        },
-        {
           "title": "Modules",
           "slug": "modules"
+        },
+        {
+          "title": "File handling",
+          "slug": "file-handling"
         },
         {
           "title": "Inheritance",
