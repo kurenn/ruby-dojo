@@ -61,12 +61,12 @@
           "slug": "modules"
         },
         {
-          "title": "File handling",
-          "slug": "file-handling"
-        },
-        {
           "title": "Inheritance",
           "slug": "inheritance"
+        },
+        {
+          "title": "File handling",
+          "slug": "file-handling"
         },
         {
           "title": "Design Principles",
