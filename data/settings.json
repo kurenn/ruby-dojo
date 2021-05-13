@@ -69,20 +69,20 @@
           "slug": "file-handling"
         },
         {
-          "title": "Design Principles",
-          "slug": "design-principles"
-        },
-        {
-          "title": "Problem Solving",
-          "slug": "problem-solving"
-        },
-        {
           "title": "Testing with RSpec",
           "slug": "testing-with-rspec"
         },
         {
           "title": "Mocks & Stubs",
           "slug": "mocks-and-stubs"
+        },
+        {
+          "title": "Design Principles",
+          "slug": "design-principles"
+        },
+        {
+          "title": "Problem Solving",
+          "slug": "problem-solving"
         },
         {
           "title": "Debugging",
