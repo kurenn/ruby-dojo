@@ -30,7 +30,7 @@ Having automated tests on our code, we will:
 
 > Is an evolutionary approach to development which combines test-first development where you write a test before you write just enough production code to fulfill that test and refactoring
 
-![TDD Cycle](tdd.png)
+![TDD Cycle](/tdd.png)
 
 This approach to create tests allow developers to keep things simple by taking small steps which lead to good code design as it enable and motivate us to refactor small portions of our code, while receiving inmediate feedback.
 
@@ -98,8 +98,8 @@ end
 
 Here is a description of each part:
 
-![Spec sample](spec.png)
-[Download](spec.png)
+![Spec sample](/spec.png)
+[Download](/spec.png)
 
 Check more on expectations [here](https://rubydoc.info/gems/rspec-expectations). For matchers, click [here](https://relishapp.com/rspec/rspec-expectations/v/3-10/docs/built-in-matchers)
 
