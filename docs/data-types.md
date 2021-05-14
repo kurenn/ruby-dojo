@@ -21,7 +21,7 @@ Interacting with data is all about programming, and this comes in different form
 * Strings
 
 Before jumping into how this works, you have to be aware that every single one of the data types described above are called [classes](https://en.wikipedia.org/wiki/Class_(computer_programming)). 
-In short terms, a **Class** is how behavior is described in object-oriented programming(OOP), and the data for each of this classes are called [instances](https://en.wikipedia.org/wiki/Instance_(computer_science)) or objects. Here we provide a bunch of examples:
+In short terms, a **Class** is how behavior is described in object-oriented programming(OOP), and the data for each of these classes are called [instances](https://en.wikipedia.org/wiki/Instance_(computer_science)) or objects. Here we provide a bunch of examples:
 
 * `2` is an instance of the `Integer` class
 * `3.14` is an instance of the `Float` class
@@ -29,9 +29,9 @@ In short terms, a **Class** is how behavior is described in object-oriented prog
 * `['apple', 'orange', 'banana']` is an instance of the `Array` class 
 * `{ name: 'Darth Vader' }` is an instance of the `Hash` class
 
-Don't worry if you don't get it right away, we will talk more about this topic later in the course. For now just, make sure you feel comfortable by saying *instance of the _____ class* for each the basic data types discussed above.
+Don't worry if you don't get it right away, we will talk more about this topic later in the course. For now, just make sure you feel comfortable by saying *instance of the _____ class* for each of the basic data types discussed above.
 
-As you can imagine you can perform operations on such instances, such as `sum`, `multiplication`, `concatenate words` and some others:
+As you can imagine, you can perform operations on such instances such as `sum`, `multiplication`, `concatenate words`, and some others:
 
 ```
 1 + 2

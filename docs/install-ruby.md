@@ -8,17 +8,17 @@ slug: install-ruby
 
 This guide will cover installing a couple of things:
 
-* ``ruby-install``: a lightweight way to install multiple Ruby versions on the same box.
+* ``ruby-install``: a lightweight way to install multiple Ruby versions on the same box
 * ``chruby``: a way to easily switch between those Ruby installs
-* ``Ruby 2.7.1``: at the time of writing the newest current stable release of Ruby.
+* ``Ruby 2.7.1``: at the time of writing the newest current stable release of Ruby
 * ``Bundler``: a package dependency manager used in the Ruby community
-* ``Rails 6.0.0``: at the time of writing the newest current stable release of Rails.
+* ``Rails 6.0.0``: at the time of writing the newest current stable release of Rails
 
 By the end of this guide, you will have these things installed and have some very, very easy ways to manage gem dependencies for your different applications / libraries, as well as having multiple Ruby versions installed and usable all at once.
 
 ### Housekeeping
 
-First of all, we’re going to run sudo apt-get update so that we have the latest sources on our box so that we don’t run into any package-related issues, such as not being able to install some packages.
+First of all, we’re going to run `sudo apt-get update` so that we have the latest sources on our box so that we don’t run into any package-related issues, such as not being able to install some packages.
 
 Next, we’ll run another command which will install the essential building tools that will be used to install Ruby:
 
@@ -92,7 +92,7 @@ ruby-2.7.1
 
 This file tells `chruby` which Ruby we want to use by default. To change the ruby version that we’re using, we can run `chruby ruby-2.7.1` for example – assuming that we have Ruby 2.7.1 installed first!
 
-Did this work? Let’s find out by running ruby -v:
+Did this work? Let’s find out by running `ruby -v`:
 
 ```bash
 ruby 2.7.1p114 (2019-10-01 revision 67812) [x86_64-linux]
@@ -100,13 +100,13 @@ ruby 2.7.1p114 (2019-10-01 revision 67812) [x86_64-linux]
 
 ### Rails 
 
-Now that we have a version of Ruby installed, we can install Rails. Because our Ruby is installed to our home directory, we don’t need to use that nasty sudo to install things; we’ve got write-access! To install the Rails gem we’ll run this command:
+Now that we have a version of Ruby installed, we can install Rails. Because our Ruby is installed in our home directory, we don’t need to use that nasty sudo to install things; we’ve got write-access! To install the Rails gem we’ll run this command:
 
 ```bash
 gem install rails 
 ```
 
-This will install the rails gem and the multitude of gems that it and its dependencies depend on, including Bundler.
+This will install the rails gem, the multitude of gems that it has, and its dependencies including Bundler.
 
 ### Rails pre-requisites
 
@@ -116,12 +116,12 @@ Before we can start a new Rails app, there are a few more things that we need to
 
 Rails requires a JavaScript runtime to run Webpacker for its assets.
 
-To fix this error install nodejs, which comes with a JavaScript runtime:
+To fix this install nodejs, which comes with a JavaScript runtime:
 
 ```bash
 sudo apt-get install nodejs
 ```
-On top of this, modern Rails uses yarn, a JavaScript package manager. We will need to install that too. The instructions are on the Yarn site but here they are too:
+On top of this, modern Rails uses Yarn, a JavaScript package manager. We will need to install that too. The instructions are on the Yarn site but here they are too:
 
 ```bash
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -131,12 +131,12 @@ sudo apt-get update && sudo apt-get install yarn
 
 ### SQLite3
 
-First of all, we need to install libsqlite3-dev, which is the package for the development headers for SQLite3. We need this so that when bundle install runs as a part of rails new, it will be able to install the sqlite3 gem that is a default dependency of Rails applications.
+First of all, we need to install libsqlite3-dev, which is the package for the development headers for SQLite3. We need this so that each time `bundle install` runs as a part of 'rails new...', this one is able to install the sqlite3 gem. sqlite3 is a default dependency of Rails applications.
 
 ```bash
 sudo apt-get install libsqlite3-dev
 ```
 
-And that’s it! Now you’ve got a Ruby on Rails environment where you can use to start your (first?) Rails application with such minimal effort.
+And that’s it! Now you’ve got yourself a shiny new Ruby on Rails environment where you can use to start your (first?) Rails application with such minimal effort.
 
 A good read after this would be the [official guides for Ruby on Rails](http://guides.rubyonrails.org/).
