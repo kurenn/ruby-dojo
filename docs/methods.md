@@ -6,14 +6,14 @@ slug: methods
 
 ## What are you going to learn?
 
-* Understand what is a `method`, arguments and return values 
+* Understand what is a `method`, its arguments, and return values 
 * Group logic into methods for reutilization
 * Understand when to use methods and why
 * Correctly utilize the basic syntax for methods in Ruby
 
 ## What is a Method?
 
-A `method` is a block of code to achieve `one` particular goal. We actually have been already working with them through the [dot notation](https://dwayne-phillips.medium.com/object-oriented-programming-and-dot-notation-b8cdbe0fe825), some examples are:
+A `method` is a block of code to achieve `one` particular goal. We actually've been already working with them through the [dot notation](https://dwayne-phillips.medium.com/object-oriented-programming-and-dot-notation-b8cdbe0fe825). Some examples of a method are:
 
 ```ruby
 "Hi, my name is Alice".upcase
@@ -23,7 +23,7 @@ A `method` is a block of code to achieve `one` particular goal. We actually have
 #=> 5.0
 ```
 
-One of the most important on why `methods` exists, is to reuse code, but also to give more meaning to a block of code, that otherwise will just be floating around. So take for example
+One of the most important things about why `methods` exists, is to reuse code, but also to give more meaning to a block of code, that otherwise will just be floating around. So take for example
 the `upcase` method, what would you do if that does not exist?. You can also think of methods like sending messages to **instances** or **objects**. In other words, telling a string to
 provide an upcased version of it.
 

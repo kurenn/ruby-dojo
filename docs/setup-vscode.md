@@ -6,9 +6,9 @@ slug: setup-vscode
 
 ## Installation
 
-If you don't yet have VS Code installed on your computer, head to [code.visualstudio.com](https://code.visualstudio.com/) to download it. You can open the dropdown to choose the versions you want to download, but usually, the big button should do the work.
+If you don't yet have VS Code installed on your computer, head to [code.visualstudio.com](https://code.visualstudio.com/) to download it. You can open the dropdown to choose the version you want to download, but usually, the big button should do the work.
 
-## Extensions and settings Ruby on Rails Developers
+## Extensions and settings for Ruby on Rails Developers
 
 Ruby is built with developer happiness in mind. However, if your editor is not correctly set up, you’re in for a painful ride. Finding the right extensions on VS Code can take you down a long trial-and-error path.
 
@@ -54,4 +54,4 @@ You can install these through command line, one by one using the command: `code 
   "files.trimTrailingWhitespace": true,
 ```
 
-Add these settings in `File > Preferences > Settings` (open the settings in json)
+Add these settings in `File > Preferences > Settings` (open the settings in json).
