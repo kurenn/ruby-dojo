@@ -10,7 +10,7 @@ slug: design-principles
 * Understand and apply the Law of Demeter
 * Advantages of having clean code and keep development happiness 
 
-![Development Happiness](dev-happiness.jpeg)
+![Development Happiness](/dev-happiness.jpeg)
 
 ## SOLID Principles
 
