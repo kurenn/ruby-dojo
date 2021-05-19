@@ -276,6 +276,8 @@ The repo is this -> https://github.com/kurenn/SOLID_examples
 
 ## Additional Resources
 
++ [Ruby Midwest 2011 - Keynote: Architecture the Lost Years by Robert Martin](https://www.youtube.com/watch?v=WpkDN78P884)
++ [Rails Conf 2013 The Magic Tricks of Testing by Sandi Metz](https://www.youtube.com/watch?v=URSWYvyc42M)
 + [SOLID Principles](https://rubygarage.org/blog/solid-principles-of-ood)
 + [Ruby Docs](https://www.ruby-doc.org/)
 + [Icalia Labs Internal Ruby Guides](https://github.com/IcaliaLabs/guides/tree/master/stack/ruby)
