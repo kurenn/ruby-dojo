@@ -90,16 +90,8 @@
       "section": "Module 2",
       "topics": [
         {
-          "title": "Web & HTTP I",
-          "slug": "web-and-http-i"
-        },
-        {
-          "title": "Web & HTTP II",
-          "slug": "web-and-http-ii"
-        },
-        {
-          "title": "Web & HTTP III",
-          "slug": "web-and-http-iii"
+          "title": "Web & HTTP",
+          "slug": "web-and-http"
         },
         {
           "title": "Rails Ecosystem",

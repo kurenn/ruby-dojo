@@ -1,7 +1,7 @@
 ---
-title: Web & HTTP I
+title: Web & HTTP
 date: 2021-04-15
-slug: web-and-http-i
+slug: web-and-http
 ---
 
 ## What are you going to learn ?
