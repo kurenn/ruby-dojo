@@ -483,13 +483,13 @@ resources :products, only [:new, :create]
 
 ## Exercises
 
-For this, we will need you to create an application. Take into consideration, that this application is the one we will be using in further lessons.
+For this, we will need you to clone the application we will be working on. Take into consideration, that this application is the one we will be using in further lessons.
 
 ```bash
-$ rails new birdie
+$ git clone git@github.com:kurenn/birdie.git
 ```
 
-We will be creating an application that will behave similar to [Twitter](https://twitter.com), so be ready.
+This application will mimic how Twitter currently works.
 
 ## Additional Resources
 
