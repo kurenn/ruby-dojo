@@ -82,7 +82,7 @@ Will create a products controller and it will defined an index action with every
 
 ### Actions & Rendering
 
-![rails_and_mvc](mvc.png)
+![rails_and_mvc](/mvc.png)
 
 Now that you know how the controller and action decide what to render to the user, we can learn a bit more about how that works. Normally the rendering takes place at the end of the action, generating  HTML, JS, XML, etc., back to the user. 
 
