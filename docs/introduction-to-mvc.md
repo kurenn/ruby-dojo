@@ -298,7 +298,7 @@ If you simply want to return the whole collection you can use
 
 ```ruby
 => Product.all
-=> => #<ActiveRecord::Relation [#<Product id: 1, name: "a productirijillo", ... >, #<Product id: 2, name: "another productirijillo", ...>]>
+=> #<ActiveRecord::Relation [#<Product id: 1, name: "a productirijillo", ... >, #<Product id: 2, name: "another productirijillo", ...>]>
 ```
 
 You can also use any other attribute in `find` method 
