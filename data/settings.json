@@ -98,6 +98,10 @@
           "slug": "rails-ecosystem"
         },
         {
+          "title": "Introduction to Rails",
+          "slug": "introduction-to-rails"
+        },
+        {
           "title": "Introduction to MVC",
           "slug": "introduction-to-mvc"
         },
