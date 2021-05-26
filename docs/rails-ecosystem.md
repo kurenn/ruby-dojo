@@ -111,6 +111,205 @@ you probably will be working with dynamic data floating from the server to the c
 
 Keep in mind that a view and be almost any format, [JSON](https://www.json.org/json-en.html), [XML](https://en.wikipedia.org/wiki/XML), [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) or any other you face with.
 
+## Structure of rails app
+
+Let's explore how a new rails application looks like after running the new application command:
+
+```bash
+$ rails new my_app
+```
+The top-level directory will be something like:
+
+```bash
+$ cd my_app
+$ tree -l
+.
+├── Gemfile
+├── Gemfile.lock
+├── README.rdoc
+├── Rakefile
+├── config.ru
+├── app
+│   ├── assets
+│   │   ├── images
+│   │   ├── javascripts
+│   │   └── stylesheets
+│   ├── controllers
+│   │   └── concerns
+│   ├── helpers
+│   ├── mailers
+│   ├── models
+│   │   └── concerns
+│   └── views
+│       └── layouts
+├── bin
+├── config
+│   ├── environments
+│   ├── initializers
+│   └── locales
+├── db
+├── lib
+│   ├── assets
+│   └── tasks
+├── log
+├── public
+├── test
+│   ├── controllers
+│   ├── fixtures
+│   ├── helpers
+│   ├── integration
+│   ├── mailers
+│   └── models
+├── tmp
+│   └── cache
+│       └── assets
+└── vendor
+    └── assets
+        ├── javascripts
+        └── stylesheets
+
+38 directories
+```
+
+Rails has a place for everything, let's start with the files in the top of the application directory
+
+| File     | Description |
+|------------------|-------------|
+| config.ru | Configures the Rack Webserver inteerface, either to create Rails application or to use Rack middleware |
+| Gemfile | Specifies the dependencies (gems) inside our Rails application.   | 
+| Gemfile.lock | Records the specific versions for each of your rails applications dependencies. This file is maintained by Bundler  | 
+| Rakefile | Contains tasks to run tests, create documentation, and more. |
+| README | By default this will contain general information about the Rails framework, but is recommended to use this file to create a nice introductory page so that future developers will know what our application does|
+
+### App Folder
+
+Most of our work will happen inside the `app` directory, as the main code for the application lives below this folder. 
+
+```bash
+$ tree app/
+app
+├── assets
+│   ├── images
+│   ├── javascripts
+│   │   └── application.js
+│   └── stylesheets
+│       └── application.css
+├── controllers
+│   ├── application_controller.rb
+│   └── concerns
+├── helpers
+│   └── application_helper.rb
+├── javascript
+│   └── channels
+│   └── packs
+├── mailers
+├── models
+│   └── concerns
+└── views
+    └── layouts
+        └── application.html.erb
+```
+
+### Test Folder
+
+Rails owes its stability to the use of tests, and because of that it provides a layout for testing your application inside the `test` directory. 
+
+When writing models or controllers it will produce skeleton test code automatically, so if we explore the `test` directory we'll see an output that looks really similar to the `app` directory:
+
+```bash
+$ tree test
+test
+├── controllers
+├── fixtures
+├── helpers
+├── integration
+├── mailers
+├── models
+└── test_helper.rb
+```
+
+We will be using `rspec`, therefore this folder is no longer going to be used, instead tests (or specs) will live inside `spec` folder.
+
+### Configuration Folder
+
+Look at a sneak peek of this folder: 
+
+```bash
+config/
+├── application.rb
+├── boot.rb
+├── database.yml
+├── environment.rb
+├── environments
+│   ├── development.rb
+│   ├── production.rb
+│   └── test.rb
+├── initializers
+│   ├── assets.rb
+│   ├── backtrace_silencers.rb
+│   ├── cookies_serializer.rb
+│   ├── filter_parameter_logging.rb
+│   ├── inflections.rb
+│   ├── mime_types.rb
+│   ├── session_store.rb
+│   └── wrap_parameters.rb
+├── locales
+│   └── en.yml
+├── routes.rb
+└── secrets.yml
+```
+
+As you can see this directory contains all our rails application needs. When we want to configure routes, database, create initializers, modified some locales or defined deployment instructions this is the folder that we are looking for. 
+
+Some important things to notice about this folder
+
+- Before running your application, Rails loads and executes `config/environment.rb` and `config/application.rb` files
+- In addition Rails will also load a per-environment configuration file. This file lives in the `environments` directory and is where you place configuration options that vary depending on the environment
+- If you have special requirements, maybe you're in favor of creating an staging enviroment, you can easily create it with rails. Just add a new configuration file (`config/staging.rb`) and a new section in the database configuration file, and you are ready to go! 
+
+### Lib Folder
+
+You can place here your files that extend the rails app functionality. Anything that isn't directly related to a model, view, or controller should be placed in `lib`. It is a good practice to create subdirectories inside `lib`, so you can group related functionality. 
+
+You'll also find a `tasks` directory under `lib`. This is where you can write your own Rake tasks
+
+### Logs Folder
+
+As our application executes, it produces a bunch of useful logging information. This is stored by default in this directory. Here you'll find three main log files:
+
+```bash
+$ tree log/
+log/
+├── development.log
+├── production.log
+└── test.log
+```
+This log contains trace lines, timing statistics, cache information, database queries executed and so on
+
+### Public Folder
+
+This is the folder that the outside world can see, the external face of your application. Contains static files and compiled assets
+
+### Bin Folder
+
+Contains all necessary scripts to run your application,  and that means that this directory contains the Rails script. This is the script that is run when you execute `rails` command in the command line. Take notice that the first argument you pass to that script determines the function Rails will perform. 
+
+### Tmp Folder
+
+Just like the name says, this one will include temporal files (caches, pids and sessions files). Generally this files are cleaned up automatically by Rails, but ocassionally if things go wrong, you might need to look in here and delete old files
+
+### Vendor Folder
+
+This is a place for all third-party code. In a typical rails application this includes vendored gems 
+
+### Documentation Folder
+
+This directory is no longer part of the required directories, and it won't be created in your Rails app by default. But just for you know Rails provides a bundle of rake tasks to generate automatic documentation, and all the files generated will be placed inside the `doc` folder.
+
+* `doc:app` will generate application documentation in HTML format
+* `doc:rails` will provide documentation for the version of Rails you're runnning. Just note that this command will take a while. 
+* `doc:guides` will provide oficial rails guides. This needs `redcarpet` gem, so make sure to to add it to Gemfile before you run this command.
+
 ## Exercises
 
 For this, we will need you to make sure you have Rails installed on your machine:
