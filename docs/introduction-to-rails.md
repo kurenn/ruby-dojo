@@ -540,6 +540,7 @@ This is the companion file of Gemfile. This file ensures that other developers i
 
 ## Additional Resources
 
++ [The Rails Command Line](https://guides.rubyonrails.org/command_line.html)
 + [Ruby on Rails](https://rubyonrails.org/)
 + [Ruby on Rails Guides](https://guides.rubyonrails.org/)
 + [Rails API](https://api.rubyonrails.org/)
