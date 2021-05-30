@@ -236,9 +236,7 @@ Any change you make to the `app/views/layouts/application.html.erb` will affect 
 
 **Remember to perform a commit for each step below**
 
-1. Using the `content_for` directive set the `title` for every action on the pages controller following this format:
-  1.1 Birdie::Home
-  1.2 Birdie::About
+1. Using the `content_for` directive set the `title` for every action on the pages controller following this format -> **Birdie::Home**
 
 You can read more on layouts and views [here](https://guides.rubyonrails.org/layouts_and_rendering.html). **We highly recommend you do it.**
 
@@ -258,8 +256,9 @@ Rails.application.routes.draw do
 end
 ```
 
-The code above will tell Rails to respond with the `home` action from the `pages controller` each time someone requests the root path. As you can see we also removed the previous home URI. You don't actually have to do that
-but just to keep things consistent.
+The code above will tell Rails to respond with the `home` action from the `pages controller` each time someone requests the root path. As you can see we also removed the previous home URI. You don't actually have to do that, but just to avoid havind two actions that respond to a single action.
+
+Remember you can always track the code [here](https://github.com/kurenn/birdie/tree/pages-controller)
 
 ### Resources
 
