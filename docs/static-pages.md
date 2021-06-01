@@ -14,7 +14,7 @@ slug: static-pages
 
 Before starting building a feature, it is important to create a new branch, let's do that:
 
-```ruby
+```bash
 $ git checkout -b pages-controller
 ```
 
