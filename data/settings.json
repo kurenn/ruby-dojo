@@ -118,6 +118,10 @@
           "slug": "modeling-users"
         },
         {
+          "title": "Sign Up",
+          "slug": "user-sign-up"
+        },
+        {
           "title": "Associations with ActiveRecord",
           "slug": "associations-with-activerecord"
         },
