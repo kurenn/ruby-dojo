@@ -1,5 +1,5 @@
 <template>
-  <a href="https://github.com/samuelhorn/jamdocs" :class="size" title="Git-repository" aria-label="Jamdocs on Github">
+  <a href="https://github.com/kurenn/ruby-dojo" :class="size" title="Git-repository" aria-label="Ruby Dojo on Github">
     <github-icon class="icon" />
     {{text}}
   </a>
@@ -71,4 +71,3 @@ a {
   }
 }
 </style>
-

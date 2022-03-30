@@ -82,14 +82,14 @@ Ruby on Rails uses the MVC architecture pattern to organiza the application. It 
 Models handles the representation of business logic and the stored information in the database.
 
 
-Models uses ActiveRecord underneath. 
+Models uses ActiveRecord underneath.
 
 > An object that wraps a row in a database table or view, encapsulates the database access, and adds domain logic on that data.
 
 [ActiveRecord](https://www.martinfowler.com/eaaCatalog/activeRecord.html) is the [object-relational mapping](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) (ORM) supplied with Rails, and it's basically the M in MVC. Designed to handle all of an application's tasks that relate to the database, including:
 
 * establishing a connection to the database server
-* perform the [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations on a database through abstractions. 
+* perform the [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations on a database through abstractions.
 
 ### Controllers
 
@@ -97,14 +97,14 @@ The controllers are the ones the orchestrate the link between the view layer and
 
 * processes the requests and responses
 * handles server errors and send them back to the client
-* gather data from a browser request in order to use create or update a model 
+* gather data from a browser request in order to use create or update a model
 
 ### Views
 
 The view is in charge of presenting the logic to the final user. In Rails, everything that is sent to the web browser is handled by a view.
 
 * no logic or processing should be performed at this layer
-* information retrieval should be avoided 
+* information retrieval should be avoided
 
 A view is not only HTML, and may not contain Ruby code at all. However when working with Rails, this is not commonly the case, because
 you probably will be working with dynamic data floating from the server to the client.
@@ -183,7 +183,7 @@ Rails has a place for everything, let's start with the files in the top of the a
 
 ### App Folder
 
-Most of our work will happen inside the `app` directory, as the main code for the application lives below this folder. 
+Most of our work will happen inside the `app` directory, as the main code for the application lives below this folder.
 
 ```bash
 $ tree app/
@@ -212,7 +212,7 @@ app
 
 ### Test Folder
 
-Rails owes its stability to the use of tests, and because of that it provides a layout for testing your application inside the `test` directory. 
+Rails owes its stability to the use of tests, and because of that it provides a layout for testing your application inside the `test` directory.
 
 When writing models or controllers it will produce skeleton test code automatically, so if we explore the `test` directory we'll see an output that looks really similar to the `app` directory:
 
@@ -232,7 +232,7 @@ We will be using `rspec`, therefore this folder is no longer going to be used, i
 
 ### Configuration Folder
 
-Look at a sneak peek of this folder: 
+Look at a sneak peek of this folder:
 
 ```bash
 config/
@@ -259,17 +259,17 @@ config/
 └── secrets.yml
 ```
 
-As you can see this directory contains all our rails application needs. When we want to configure routes, database, create initializers, modified some locales or defined deployment instructions this is the folder that we are looking for. 
+As you can see this directory contains all our rails application needs. When we want to configure routes, database, create initializers, modified some locales or defined deployment instructions this is the folder that we are looking for.
 
 Some important things to notice about this folder
 
 - Before running your application, Rails loads and executes `config/environment.rb` and `config/application.rb` files
 - In addition Rails will also load a per-environment configuration file. This file lives in the `environments` directory and is where you place configuration options that vary depending on the environment
-- If you have special requirements, maybe you're in favor of creating an staging enviroment, you can easily create it with rails. Just add a new configuration file (`config/staging.rb`) and a new section in the database configuration file, and you are ready to go! 
+- If you have special requirements, maybe you're in favor of creating an staging enviroment, you can easily create it with rails. Just add a new configuration file (`config/staging.rb`) and a new section in the database configuration file, and you are ready to go!
 
 ### Lib Folder
 
-You can place here your files that extend the rails app functionality. Anything that isn't directly related to a model, view, or controller should be placed in `lib`. It is a good practice to create subdirectories inside `lib`, so you can group related functionality. 
+You can place here your files that extend the rails app functionality. Anything that isn't directly related to a model, view, or controller should be placed in `lib`. It is a good practice to create subdirectories inside `lib`, so you can group related functionality.
 
 You'll also find a `tasks` directory under `lib`. This is where you can write your own Rake tasks
 
@@ -292,7 +292,7 @@ This is the folder that the outside world can see, the external face of your app
 
 ### Bin Folder
 
-Contains all necessary scripts to run your application,  and that means that this directory contains the Rails script. This is the script that is run when you execute `rails` command in the command line. Take notice that the first argument you pass to that script determines the function Rails will perform. 
+Contains all necessary scripts to run your application,  and that means that this directory contains the Rails script. This is the script that is run when you execute `rails` command in the command line. Take notice that the first argument you pass to that script determines the function Rails will perform.
 
 ### Tmp Folder
 
@@ -300,14 +300,14 @@ Just like the name says, this one will include temporal files (caches, pids and 
 
 ### Vendor Folder
 
-This is a place for all third-party code. In a typical rails application this includes vendored gems 
+This is a place for all third-party code. In a typical rails application this includes vendored gems
 
 ### Documentation Folder
 
 This directory is no longer part of the required directories, and it won't be created in your Rails app by default. But just for you know Rails provides a bundle of rake tasks to generate automatic documentation, and all the files generated will be placed inside the `doc` folder.
 
 * `doc:app` will generate application documentation in HTML format
-* `doc:rails` will provide documentation for the version of Rails you're runnning. Just note that this command will take a while. 
+* `doc:rails` will provide documentation for the version of Rails you're runnning. Just note that this command will take a while.
 * `doc:guides` will provide oficial rails guides. This needs `redcarpet` gem, so make sure to to add it to Gemfile before you run this command.
 
 ## Exercises
